@@ -118,7 +118,7 @@ const UpdateProduct = {
           console.log("ok");
           const userId = localStorage.getItem("id");
           console.log(userId);
-          const data_URL = "http://localhost:6767/api/products";
+          const data_URL = "https://headphoneapi.herokuapp.com/api/products";
           axios.put(`${data_URL}/${id}/${userId}`, data, {
             headers: {
               Authorization: "Bearer " + localStorage.getItem("token"),
@@ -149,7 +149,7 @@ const UpdateProduct = {
               };
               const userId = localStorage.getItem("id");
               console.log(userId);
-              const data_URL = "http://localhost:6767/api/products";
+              const data_URL = "https://headphoneapi.herokuapp.com/api/products";
               axios.put(`${data_URL}/${id}/${userId}`, data, {
                 headers: {
                   Authorization: "Bearer " + localStorage.getItem("token"),

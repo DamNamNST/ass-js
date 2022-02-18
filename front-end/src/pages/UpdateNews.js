@@ -73,7 +73,7 @@ const UpdateNews = {
           image: document.querySelector("#update-image").value,
           content: document.querySelector("#update-content").value,
         };
-        const data_URL = `http://localhost:6767/api/news/${id}/${userId}`;
+        const data_URL = `https://headphoneapi.herokuapp.com/api/news/${id}/${userId}`;
         await axios.put(data_URL, data,{
           headers: { "content-type": "application/json" ,'Authorization': 'Bearer ' + localStorage.getItem('token') }
         });

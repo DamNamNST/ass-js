@@ -113,7 +113,7 @@ const Header = {
       $("#dashboard-link").classList.add("hide");
     }
     $("#btn-logout").addEventListener("click", function () {
-      const data_URL = "http://localhost:6767/api/signout";
+      const data_URL = "https://headphoneapi.herokuapp.com/api/signout";
       axios.get(data_URL);
       localStorage.removeItem("id");
       localStorage.removeItem("username");

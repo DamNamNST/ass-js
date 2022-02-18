@@ -187,7 +187,7 @@ const ListItemCart = {
           products = JSON.parse(localStorage.getItem("products"));
           user[0].products = [...user[0].products, ...products];
           console.log(user[0]);
-          const data_URL = "http://localhost:6767/api/users/";
+          const data_URL = "https://headphoneapi.herokuapp.com/api/users/";
           axios.put(data_URL + id, user[0], {
             headers: {
               Authorization: "Bearer " + localStorage.getItem("token"),

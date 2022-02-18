@@ -86,7 +86,7 @@ const ProfileAccount = {
             password: passwordForm.value,
             role: parseInt(localStorage.getItem("role")),
           };
-          const data_URL = "http://localhost:6767/api/users/";
+          const data_URL = "https://headphoneapi.herokuapp.com/api/users/";
           localStorage.setItem("username", usernameForm.value);
           localStorage.setItem("password", passwordForm.value);
           localStorage.setItem("numberphone", numberphoneForm.value);
@@ -110,7 +110,7 @@ const ProfileAccount = {
                 email: emailForm.value,
                 role: parseInt(localStorage.getItem("role")),
               };
-              const data_URL = "http://localhost:6767/api/users/";
+              const data_URL = "https://headphoneapi.herokuapp.com/api/users/";
               axios.put(data_URL + id, data,{
                 headers:{
                   'Authorization': 'Bearer ' + localStorage.getItem('token')

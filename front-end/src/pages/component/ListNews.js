@@ -66,7 +66,7 @@ const ListNews = {
               image: $("#form-new-image").value,
               content: $("#form-new-content").value,
             };
-            const data_URL = "http://localhost:6767/api/news/";
+            const data_URL = "https://headphoneapi.herokuapp.com/api/news/";
             const method_SEVER = {
               method: "POST",
               headers: { "content-type": "application/json" ,'Authorization': 'Bearer ' + localStorage.getItem('token') },
@@ -86,7 +86,7 @@ const ListNews = {
               if(question){
                 const { id } = this.dataset;
                 const userId = localStorage.getItem("id")
-                const data_URL = `http://localhost:6767/api/news/${id}/${userId}`;
+                const data_URL = `https://headphoneapi.herokuapp.com/api/news/${id}/${userId}`;
                await axios.delete(data_URL,{
                   headers: { "content-type": "application/json" ,'Authorization': 'Bearer ' + localStorage.getItem('token') }
                 });

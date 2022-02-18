@@ -1,18 +1,9 @@
-import { $ } from "../../front-end/src/utils";
 import axios from "axios";
-import firebase from "../firebase";
-import ProductApi from "../../front-end/src/api/ProductApi";
 import SearchBox from "../../front-end/src/pages/component/SearchBox";
-import { checkEmail, checkNumberPhone } from "../validation";
+import { $ } from "../../front-end/src/utils";
+import { checkEmail } from "../validation";
 const RegistrationPage = {
   render() {
-    // if (localStorage.getItem("username") != null) {
-    //   alert(
-    //     "Bạn đang đăng nhập tài khoản , vui lòng đăng xuất để đăng kí tài khoản"
-    //   );
-    //   window.location.hash = "/";
-    //   return false;
-    // }
     return /*html*/ `
     <head>
     <title>Đăng kí</title>
@@ -89,7 +80,7 @@ const RegistrationPage = {
           email: $("#form-registration-email").value,
           role: 1,
         };
-        const data_URL = "http://localhost:6767/api/signup";
+        const data_URL = "https://headphoneapi.herokuapp.com/api/signup";
         const method_SEVER = {
           method: "POST",
           headers: { "content-type": "application/json" },

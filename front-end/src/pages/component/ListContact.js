@@ -115,7 +115,7 @@ const ListContact = {
         if (question) {
           const { id } = this.dataset;
           const userId = localStorage.getItem("id");
-          const data_URL = `http://localhost:6767/api/contact/${id}/${userId}`;
+          const data_URL = `https://headphoneapi.herokuapp.com/api/contact/${id}/${userId}`;
           await axios.delete(data_URL, {
             headers: {
               "content-type": "application/json",

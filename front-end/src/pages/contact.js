@@ -66,7 +66,7 @@ const Contact = {
               message: $("#contact-content").value,
             };
             const id = localStorage.getItem("id")
-            const data_URL = `http://localhost:6767/api/contact/${id}`;
+            const data_URL = `https://headphoneapi.herokuapp.com/api/contact/${id}`;
             const method_SEVER = {
               method: "POST",
               headers: { "content-type": "application/json",'Authorization': 'Bearer ' + localStorage.getItem('token')},

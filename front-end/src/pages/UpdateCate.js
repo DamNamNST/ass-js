@@ -54,7 +54,7 @@ const UpdateCate = {
           id: document.querySelector("#update-id").value,
           name: document.querySelector("#update-name").value,
         };
-        const data_URL = "http://localhost:6767/api/categories/";
+        const data_URL = "https://headphoneapi.herokuapp.com/api/categories/";
         axios.put(`${data_URL}${id}/${userId}`, data, {
           headers: {
             "content-type": "application/json",

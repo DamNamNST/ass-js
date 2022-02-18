@@ -96,7 +96,7 @@ const ListProduct = {
                 createdAt: Date.now(),
               };
               const userId = localStorage.getItem('id')
-              const data_URL = "http://localhost:6767/api/products/";
+              const data_URL = "https://headphoneapi.herokuapp.com/api/products/";
               const method_SEVER = {
                 method: "POST",
                 headers: { "content-type": "application/json" ,'Authorization': 'Bearer ' + localStorage.getItem('token') },
@@ -125,7 +125,7 @@ const ListProduct = {
     //start XOÁ SẢN PHẨM
     const buttons = document.querySelectorAll(".btn-remove");
     const userId = localStorage.getItem('id')
-    const data_URL = "http://localhost:6767/api/products";
+    const data_URL = "https://headphoneapi.herokuapp.com/api/products";
     buttons.forEach((buttons) => {
       buttons.addEventListener("click", async function (e) {
         e.preventDefault();

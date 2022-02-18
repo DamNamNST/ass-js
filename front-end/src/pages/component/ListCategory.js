@@ -69,7 +69,7 @@ const ListCate = {
             name: $("#cate-add-name").value,
           };
           
-          const data_URL = "http://localhost:6767/api/categories/";
+          const data_URL = "https://headphoneapi.herokuapp.com/api/categories/";
           const method_SEVER = {
             method: "POST",
             headers: { "content-type": "application/json",'Authorization': 'Bearer ' + localStorage.getItem('token') },
@@ -86,7 +86,7 @@ const ListCate = {
        
       });
     const buttons = document.querySelectorAll(".btn-remove-cate");
-    const data_URL = "http://localhost:6767/api/categories/";
+    const data_URL = "https://headphoneapi.herokuapp.com/api/categories/";
     buttons.forEach((buttons) => {
       buttons.addEventListener("click",async function (e) {
         e.preventDefault();
