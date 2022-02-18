@@ -1,7 +1,7 @@
 import ProductApi from "../api/ProductApi.js";
 import { reRender } from "../utils.js";
 import CountCate from './component/CountCate.js';
-import Header from "./component/Header.js";
+import Header from "./component/header.js";
 import ListCate from "./component/ListCategory.js";
 
 const DashboardCate = {

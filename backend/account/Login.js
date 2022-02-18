@@ -69,32 +69,27 @@ const Login = {
           "Vui lòng nhập thông tin tài khoản";
         return false;
       }
-      if(!checkEmail(email)){
-        $(".errorLogin").innerHTML ="Vui lòng nhập đúng định dạng email";
+      if (!checkEmail(email)) {
+        $(".errorLogin").innerHTML = "Vui lòng nhập đúng định dạng email";
       }
-      const { data } = await ProductApi.getAccount(email, password)
-        .catch(
+      const { data } = await ProductApi.getAccount(email, password).catch(
         function (error) {
           if (error.response) {
             $(".errorLogin").innerHTML = error.response.data.error;
-          } 
+          }
         }
       );
-      console.log(data.length);
-      data.map(({ id, name, image, email, role, token }) => {
-        (window.location.hash = "/"),
-         localStorage.setItem("id", id);
-        localStorage.setItem("username", name);
-        localStorage.setItem("email", email);
-        localStorage.setItem("role", role);
-        localStorage.setItem("image", image);
-        localStorage.setItem("token", token);
-        if (role == 0) {
-          $("#dashboard-link").classList.add("show");
-        } else {
-          $("#dashboard-link").classList.add("hide");
-        }
-      });
+      (window.location.hash = "/"), localStorage.setItem("id", data.id);
+      localStorage.setItem("username", data.name);
+      localStorage.setItem("email", data.email);
+      localStorage.setItem("role", data.role);
+      localStorage.setItem("image", data.image);
+      localStorage.setItem("token", data.token);
+      if (role == 0) {
+        $("#dashboard-link").classList.add("show");
+      } else {
+        $("#dashboard-link").classList.add("hide");
+      }
     });
     return `${await SearchBox.afterRender()}`;
   },

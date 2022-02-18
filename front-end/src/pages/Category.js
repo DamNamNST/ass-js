@@ -1,6 +1,6 @@
 import { parseRequestUrl } from "../utils";
 import ProductApi from '../api/ProductApi.js';
-import Header from "./component/Header";
+import Header from "./component/header";
 const Category = {
    async render (){
         const request = parseRequestUrl();

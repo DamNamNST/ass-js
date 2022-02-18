@@ -1,5 +1,5 @@
 const mongoose = require('mongoose'); 
-const MONGO_URL = "mongodb://localhost:27017/quyet_buy"
+const MONGO_URL = process.env.MONGODB_URL ||"mongodb://localhost:27017/quyet_buy"
 
 //start tạo ra hàm connect
 const connect = () =>
