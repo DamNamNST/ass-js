@@ -63,51 +63,43 @@ const HomePages = {
         </div>
       </div>
                       ${product
-                        .map(
-                          (item) => /*html*/ `
+        .map(
+          (item) => /*html*/ `
                          <div class="card-product col-md-3 col-sm-6 mt-2">
-                         <a href="/#/products/${
-                           item._id
-                         }" class="text-decoration-none">
-                         ${
-                           parseInt((item.salePrice / item.price) * 100) == 0
-                             ? ""
-                             : ` <div class="sale text-width">${parseInt(
-                                 (item.salePrice / item.price) * 100
-                               )}%</div>`
-                         }
-                             <img class="card-img-top img-fluid p-4" src="${
-                               item.image
-                             }" height="250" alt="Card image cap">
+                         <a href="/#/products/${item._id
+            }" class="text-decoration-none">
+                         ${parseInt((item.salePrice / item.price) * 100) == 0
+              ? ""
+              : ` <div class="sale text-width">${parseInt(
+                (item.salePrice / item.price) * 100
+              )}%</div>`
+            }
+                             <img class="card-img-top img-fluid p-4" src="${item.image
+            }" height="250" alt="Card image cap">
                              </a>
                              <div class="card-body">
-                               <h5 class="card-title"><a href="/#/products/${
-                                 item._id
-                               }" class="text-decoration-none fs-6">${
-                            item.name
-                          }</a></h5>
+                               <h5 class="card-title"><a href="/#/products/${item._id
+            }" class="text-decoration-none fs-6">${item.name
+            }</a></h5>
                                <div class="row">
-                               <div class="col-md-6"><h5 class="card-text text-danger fs-6">${
-                                 item.price
-                               } VNĐ</h5></div>
+                               <div class="col-md-6"><h5 class="card-text text-danger fs-6">${item.price
+            } VNĐ</h5></div>
                                <div class="col-md-6">
-                               <h5> <small >${
-                                 item.salePrice == undefined
-                                   ? ""
-                                   : `<del class="fs-6">${item.salePrice}</del> VNĐ`
-                               }</small></h5>
+                               <h5> <small >${item.salePrice == undefined
+              ? ""
+              : `<del class="fs-6">${item.salePrice}</del> VNĐ`
+            }</small></h5>
                                </div>
                                </div>
                                
-                               <button class="btn btn-primary btn-view"><a href="/#/products/${
-                                 item._id
-                               }" class="text-decoration-none text-white"><i class="fas fa-info-circle"></i> &nbsp;XEM CHI TIẾT</a></button>
+                               <button class="btn btn-primary btn-view"><a href="/#/products/${item._id
+            }" class="text-decoration-none text-white"><i class="fas fa-info-circle"></i> &nbsp;XEM CHI TIẾT</a></button>
                                
                              </div>
                          </div>
                       `
-                        )
-                        .join("")}
+        )
+        .join("")}
                         </div>
                         </div>
                  </ul>
