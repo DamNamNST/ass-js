@@ -49,6 +49,7 @@ const routes = {
  }
 
 const router = async () => {
+    localStorage.setItem('products', JSON.stringify([]))
     const request = parseRequestUrl();
     const parseUrl = (request.resource ? `/${request.resource}` : '/') +
         (request.id ? '/:id' : '');

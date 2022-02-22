@@ -9,7 +9,7 @@ const Header = {
     const { data: cate } = await ProductApi.getAllCate();
     let products = [];
     let id = localStorage.getItem("id");
-    products = JSON.parse(localStorage.getItem("products"));
+    products =  JSON.parse(localStorage.getItem("products"));
     const reducer = (accumulator, currentValue) => {
       return accumulator + +currentValue.quantity;
     };
